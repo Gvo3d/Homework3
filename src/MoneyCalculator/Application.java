@@ -14,9 +14,8 @@ public class Application {
         double CashSum = 0;
         byte Percentage = 0;
         byte Years = 0;
-        double Aliments=0;
+        double Aliments = 0;
 
-        //Main while-loop without break
         for (int i = 0; i <= 3; i++) {
             Scanner InputScanner = new Scanner(System.in);
             switch (i) {
@@ -38,14 +37,17 @@ public class Application {
             }
         }
 
-            for (i = 0; i <= Years; i++) {
-                Aliments = CashSum*Percentage/100;
-                CashSum = CashSum+Aliments;
-                System.out.println("Year " + i);
-                System.out.println("Cash sum is " +CashSum);
-                System.out.println("Percentage value for a year is "+Aliments);
-                System.out.println();
-            }
+        int i;
+        for (i = 0; i < Years; i++) {
+            Aliments = CashSum * Percentage / 100;
+            CashSum = CashSum + Aliments;
+            System.out.println("Year " + (i+1));
+            System.out.print("Cash sum is ");
+            System.out.format("%.2f%n",  CashSum);
+            System.out.print("Percentage value for a year is ");
+            System.out.format("%.2f%n", Aliments);
+            System.out.println();
+        }
         System.exit(0);
     }
 
