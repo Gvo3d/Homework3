@@ -11,12 +11,14 @@ public class XORprotection {
         int number=0;
         int key=0;
 
+        System.out.println("Input a number");
         number=GetNumber();
+        System.out.println("Input a key!");
         key=GetNumber();
 
         String numbers = ""+number;
         String keys = ""+key;
-        System.out.println( XORal(numbers, keys) );
+        System.out.println("XOR text for this number is "+ XORal(numbers, keys) );
 
     }
 
